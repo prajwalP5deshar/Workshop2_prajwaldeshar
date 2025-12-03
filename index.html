@@ -78,5 +78,24 @@
     <footer>
 		<p>copyright &copy'</p>
 	</footer>
+
+    <script>
+    const form = document.querySelector("form");
+
+    form.addEventListener("submit", function(e) {
+        e.preventDefault(); // stops page reload
+
+        const name = form.querySelectorAll("textarea")[0].value;
+        const email = form.querySelectorAll("textarea")[1].value;
+        const message = form.querySelectorAll("textarea")[2].value;
+
+        alert(
+            "Name: " + name +
+            "\nEmail: " + email +
+            "\nMessage: " + message
+        );
+    });
+</script>
+
 </body>
 </html>
